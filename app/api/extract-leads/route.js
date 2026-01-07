@@ -38,16 +38,17 @@ export async function POST(req) {
             - Name (if available)
             - Email (if available)
             - Phone Number (MANDATORY - if a row has no phone number, skip it)
+            - Address (if available)
 
             IMPORTANT: Format the Phone Number in E.164 format (e.g. +14155552671). 
             - If the number has brackets like (416) 123-4567, convert it to +14161234567 (assuming US/Canada if no country code is obvious).
             - Remove dashes, spaces, and brackets.
             - Ensure it starts with a '+'.
 
-            Return ONLY a valid JSON array of objects with keys: "name", "email", "phoneNumber".
+            Return ONLY a valid JSON array of objects with keys: "name", "email", "phoneNumber", "address".
             Example:
             [
-                { "name": "John Doe", "email": "john@example.com", "phoneNumber": "+1234567890" }
+                { "name": "John Doe", "email": "john@example.com", "phoneNumber": "+1234567890", "address": "123 Main St, Toronto, ON" }
             ]
             Do not include markdown formatting like \`\`\`json. Just the raw JSON string.
         `;
